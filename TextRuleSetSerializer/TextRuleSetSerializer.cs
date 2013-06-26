@@ -143,7 +143,7 @@ namespace TextRuleSetSerialization
                     }
                 }
 
-                foreach (XmlNode elseNode in ruleNode.SelectNodes("ThenActions"))
+                foreach (XmlNode elseNode in ruleNode.SelectNodes("ElseActions/Action"))
                 {
                     List<RuleAction> actions = parser.ParseStatementList(elseNode.InnerText);
                     foreach (RuleAction action in actions)
