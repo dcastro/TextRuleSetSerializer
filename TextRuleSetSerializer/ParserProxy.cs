@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Workflow.Activities.Rules;
 
-namespace TextRuleSetSerializer
+namespace TextRuleSetSerialization
 {
     /// <summary>
     /// This is a proxy to the internal Parser class in the System.Workflow.Activities assembly.

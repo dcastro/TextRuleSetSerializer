@@ -5,7 +5,7 @@ using System.Text;
 using System.Workflow.Activities.Rules;
 using System.Xml;
 
-namespace TextRuleSetSerializer
+namespace TextRuleSetSerialization
 {
     public class TextRuleSetSerializer
     {
@@ -123,7 +123,7 @@ namespace TextRuleSetSerializer
             foreach (XmlNode ruleNode in xDoc.SelectNodes("//Rule"))
             {
                 Rule rule = new Rule();
-                rule.Active = ruleNode.SelectSingleNode("@Active").InnerText == "true";
+                rule.Active = ruleNode.SelectSingleNode("@Active").InnerText.ToLower() == "true";
                 rule.Description = ruleNode.SelectSingleNode("@Description").InnerText;
                 rule.Name = ruleNode.SelectSingleNode("@Name").InnerText;
                 rule.Priority = int.Parse(ruleNode.SelectSingleNode("@Priority").InnerText);
