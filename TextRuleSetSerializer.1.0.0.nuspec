@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>TextRuleSetSerializer</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <title>TextRuleSetSerializer</title>
         <authors>DCastro</authors>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>This is an alternative for Windows Workflow Rules Engine's default serializer - WorkflowMarkUpSerializer. This version serializes a RuleSet in a more readable XML format, making it easier to resolve version control merge conflicts.
 
 Credits to Chris Eyre.</description>
+        <releaseNotes>- Signed assembly
+- Added PDB file</releaseNotes>
         <frameworkAssemblies>
             <frameworkAssembly assemblyName="System.Workflow.Activities" targetFramework="" />
             <frameworkAssembly assemblyName="System.Workflow.ComponentModel" targetFramework="" />
@@ -22,6 +24,7 @@ Credits to Chris Eyre.</description>
         </frameworkAssemblies>
     </metadata>
     <files>
-        <file src="TextRuleSetSerializer\bin\Debug\TextRuleSetSerializer.dll" target="lib\TextRuleSetSerializer.dll" />
+        <file src="bin\TextRuleSetSerializer.dll" target="lib\TextRuleSetSerializer.dll" />
+        <file src="bin\TextRuleSetSerializer.pdb" target="lib\TextRuleSetSerializer.pdb" />
     </files>
 </package>
